@@ -1,0 +1,183 @@
+@font-face {
+     font-family: BrunoAce;
+     src: url('BrunoAce-Regular.ttf');
+}
+html{
+     font-family: 'BrunoAce';
+     background-color: black;
+     max-height: 100vh;
+     max-width: 100vw;
+     height: 100vh;
+     width: 100vw;
+     background-image: url(img/backG.png);
+     background-size: cover;
+     font-size: 1vw;
+}
+body{
+     margin: 0px;
+     height: 100vh;
+     width: 100vw;
+     max-height: 100vh;
+     max-width: 100vw;
+     backdrop-filter: brightness(50%);
+     overflow: hidden;
+}
+
+main{
+     margin-left: 5vw;
+     margin-right: 5vw;
+     height: 100vh;
+     display: grid;
+}
+
+#guess{
+     width: 90vw;
+     height: 40vh;
+     background-color: rgba(0, 0, 0, 0.7);
+     border-radius: 1vw;
+     display: grid;
+     grid-template-columns: 60% 40%;
+}
+#rightG{
+     color:black;
+     font-size:x-large;
+     background-color: rgb(128, 128, 128, 0.426);
+     width: 90%;
+     height: 90%;
+     margin: auto;
+     border-radius: 1em;
+     text-align: center;
+     line-height: 2em;
+}
+#leftG{
+     background-repeat: no-repeat;
+     background-position: 15%;
+     
+}
+#guessesTotal{
+     color:blue;
+}
+#guessesLeft{
+     color: red;
+}
+#correctGuesses{
+     color: green;
+}
+#result{
+     width: 90vw;
+     height: 10vh;
+     background-color: rgba(0, 0, 0, 0.7);
+     border-radius: 1vw;
+     font-size: 4vh;
+     text-align: center;
+     color: wheat;
+     line-height:2.5em;
+     word-spacing: 0.25em;
+}
+#keyboard{
+     width: 90vw;
+     height: 40vh;
+     border-radius: 1vw;
+     display: grid;
+     grid-template-columns: 70% 30%;
+}
+
+#normalKeys{
+     width: 54vw;
+     display: grid;
+     padding: 1em;
+     grid-template-rows: min-content min-content min-content;
+     gap: 1em;
+}
+#specialKeys{
+     width: 30vw;
+     display: grid;
+     padding: 1em;
+     grid-template-rows: min-content min-content min-content;
+     grid-template-columns: min-content min-content min-content;
+     gap: 1em;
+}
+
+.normalKey, .specialKey{
+     background-color: rgb(128, 128, 128, 0.426);
+     width: 3em;
+     height: 3em;
+     text-align:center;
+     font-size: 150%;
+     border-radius: 0.4em;
+     transition: 0.1s;
+}
+
+.normalKey:hover, .specialKey:hover{
+     cursor: pointer;
+     background-color: rgba(102, 102, 102);
+     scale: 1.1;
+}
+
+#rowFirst{
+     display: grid;
+     grid-template-columns: repeat(10, auto);
+     justify-items: center;
+}
+
+#rowSecond{
+     display: grid;
+     grid-template-columns: repeat(9, auto);
+     justify-items: center;
+}
+
+#rowThird{
+     display: grid;
+     grid-template-columns: repeat(8, auto);
+     justify-items: center;
+}
+
+.incorrect:hover, .incorrect{
+     scale: 1;
+     background-color: rgba(255, 0, 0, 0.426);
+     cursor:default;
+}
+
+.correct:hover, .correct{
+     scale: 1;
+     background-color: rgba(0, 255, 13, 0.426);
+     cursor:default;
+}
+
+.correctGuess{
+     color: black;
+     border: 0.2em solid green;
+     width: 1.5em;
+     height: 1.5em;
+}
+
+.incorrectGuess{
+     color: black;
+     border: 0.2em solid red;
+     width: 1.5em;
+     height: 1.5em;
+}
+
+#history{
+     display: flex;
+     flex-wrap: wrap;
+     width: 75%;
+     padding: 0.1em;
+     margin-left: auto;
+     margin-right: auto;
+     line-height: normal;
+}
+
+p{
+     margin-block-start: 0em;
+     margin-block-end: 0em;
+     border-radius: 0.5em;
+}
+
+button{
+     font-size: inherit;
+     background-color: rgb(128, 128, 128, 0.426);
+     box-shadow: none;
+     border-radius: 0.5em;
+     border-width: 0px;
+}
